@@ -1,0 +1,5 @@
+@import url(./all.min.css);
+
+#top-menu a.fa, #top-menu a.far, #top-menu a.fas {
+  font-size: 1.3em;
+}
