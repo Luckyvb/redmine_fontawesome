@@ -3,3 +3,6 @@
 #top-menu a.fa, #top-menu a.far, #top-menu a.fas {
   font-size: 1.3em;
 }
+#top-menu a:hover.fa, #top-menu a:hover.far, #top-menu a:hover.fas {
+  text-decoration: none;
+}

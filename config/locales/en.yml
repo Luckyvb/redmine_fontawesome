@@ -1,2 +1,37 @@
 en:
   fontawesome: "Font AweSome"
+  fas:
+    general:
+      replace: "Replace"
+      first: "Is first"
+      after: "After menuitem"
+      last: "Is last"
+      css: "Css class"
+      default:
+        "no": "Default: No"
+        "yes": "Default: Yes"
+    settings:
+      menu:
+        title: "Menu"
+        top:
+          title: "Top menu"
+          home:
+            title: "Home page"
+          my:
+            title: "My page"
+          projects:
+            title: "Projects"
+          administration:
+            title: "Admininistration"
+          help:
+            title: "Help"
+        account:
+          title: "Account menu"
+          register:
+            title: "Register"
+          login:
+            title: "Login"
+          my_account:
+            title: "Account"
+          logout:
+            title: "Logout"

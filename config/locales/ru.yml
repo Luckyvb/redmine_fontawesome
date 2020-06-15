@@ -1,2 +1,38 @@
 ru:
   fontawesome: "Font AweSome"
+  fas:
+    general:
+      replace: "Заменить"
+      first: "Первое"
+      after: "После меню"
+      last: "Последнее"
+      css: "Css клас"
+      default:
+        "no": "По умолчанию: Нет"
+        "yes": "По умолчанию: Да"
+    settings:
+      menu:
+        title: "Меню"
+        top:
+          title: "Верхнее меню"
+          home:
+            title: "Домашняя страница"
+            replace: "Заменить"
+          my:
+            title: "Моя страница"
+          projects:
+            title: "Проекты"
+          administration:
+            title: "Администрирование"
+          help:
+            title: "Помощь"
+        account:
+          title: "Меню учетной записи"
+          register:
+            title: "Регистрация"
+          login:
+            title: "Войти"
+          my_account:
+            title: "Моя учётная запись"
+          logout:
+            title: "Выйти"
