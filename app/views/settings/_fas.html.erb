@@ -1,0 +1,315 @@
+<%
+  settings ||= { }
+  d = Redmine::Plugin::registered_plugins[:fontawesome].settings[:default]
+  s = d.deep_merge(settings || { })
+%>
+<em class="info">
+  <%= l('fas.settings.menu.title') %>
+</em>
+<hr/>
+<em class="info">
+  <%= l('fas.settings.menu.top.title') %>
+</em>
+<hr/>
+<em class="info">
+  <%= l('fas.settings.menu.top.home.title') %>
+</em>
+<p>
+  <label><%= l('fas.general.replace').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][home][replace]', true, s['menu']['top']['home']['replace'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.first').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][home][first]', true, s['menu']['top']['home']['first'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.after').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][top][home][after]', s['menu']['top']['home']['after'] %>
+</p>
+<p>
+  <label><%= l('fas.general.last').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][home][last]', true, s['menu']['top']['home']['last'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.no') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.css').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][top][home][css]', s['menu']['top']['home']['css'] %>
+</p>
+<hr/>
+<em class="info">
+  <%= l('fas.settings.menu.top.my.title') %>
+</em>
+<p>
+  <label><%= l('fas.general.replace').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][my][replace]', true, s['menu']['top']['my']['replace'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+<p>
+  <label><%= l('fas.general.first').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][my][first]', true, s['menu']['top']['my']['first'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.no') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.after').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][top][my][after]', s['menu']['top']['my']['after'] %>
+</p>
+<p>
+  <label><%= l('fas.general.last').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][my][last]', true, s['menu']['top']['my']['last'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.no') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.css').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][top][my][css]', s['menu']['top']['my']['css'] %>
+</p>
+<hr/>
+<em class="info">
+  <%= l('fas.settings.menu.top.projects.title') %>
+</em>
+<p>
+  <label><%= l('fas.general.replace').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][projects][replace]', true, s['menu']['top']['projects']['replace'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+<p>
+  <label><%= l('fas.general.first').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][projects][first]', true, s['menu']['top']['projects']['first'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.no') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.after').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][top][projects][after]', s['menu']['top']['projects']['after'] %>
+</p>
+<p>
+  <label><%= l('fas.general.last').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][projects][last]', true, s['menu']['top']['projects']['last'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.no') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.css').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][top][projects][css]', s['menu']['top']['projects']['css'] %>
+</p>
+<em class="info">
+  <%= l('fas.settings.menu.top.administration.title') %>
+</em>
+<p>
+  <label><%= l('fas.general.replace').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][administration][replace]', true, s['menu']['top']['administration']['replace'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+<p>
+  <label><%= l('fas.general.first').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][administration][first]', true, s['menu']['top']['administration']['first'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.no') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.after').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][top][administration][after]', s['menu']['top']['administration']['after'] %>
+</p>
+<p>
+  <label><%= l('fas.general.last').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][administration][last]', true, s['menu']['top']['administration']['last'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.css').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][top][administration][css]', s['menu']['top']['administration']['css'] %>
+</p>
+<em class="info">
+  <%= l('fas.settings.menu.top.help.title') %>
+</em>
+<p>
+  <label><%= l('fas.general.replace').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][help][replace]', true, s['menu']['top']['help']['replace'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+<p>
+  <label><%= l('fas.general.first').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][help][first]', true, s['menu']['top']['help']['first'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.false') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.after').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][top][help][after]', s['menu']['top']['help']['after'] %>
+</p>
+<p>
+  <label><%= l('fas.general.last').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][top][help][last]', true, s['menu']['top']['help']['last'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.css').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][top][help][css]', s['menu']['top']['help']['css'] %>
+</p>
+<hr/>
+<em class="info">
+  <%= l('fas.settings.menu.account.title') %>
+</em>
+<hr/>
+<em class="info">
+  <%= l('fas.settings.menu.account.register.title') %>
+</em>
+<p>
+  <label><%= l('fas.general.replace').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][account][register][replace]', true, s['menu']['account']['register']['replace'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.first').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][account][register][first]', true, s['menu']['account']['register']['first'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.after').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][account][register][after]', s['menu']['account']['register']['after'] %>
+</p>
+<p>
+  <label><%= l('fas.general.last').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][account][register][last]', true, s['menu']['account']['register']['last'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.no') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.css').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][account][register][css]', s['menu']['account']['register']['css'] %>
+</p>
+<hr/>
+<em class="info">
+  <%= l('fas.settings.menu.account.login.title') %>
+</em>
+<p>
+  <label><%= l('fas.general.replace').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][account][login][replace]', true, s['menu']['account']['login']['replace'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.first').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][account][login][first]', true, s['menu']['account']['login']['first'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.after').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][account][login][after]', s['menu']['account']['login']['after'] %>
+</p>
+<p>
+  <label><%= l('fas.general.last').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][account][login][last]', true, s['menu']['account']['login']['last'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.no') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.css').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][account][login][css]', s['menu']['account']['login']['css'] %>
+</p>
+<hr/>
+<em class="info">
+  <%= l('fas.settings.menu.account.my_account.title') %>
+</em>
+<p>
+  <label><%= l('fas.general.replace').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][account][my_account][replace]', true, s['menu']['account']['my_account']['replace'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.first').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][account][my_account][first]', true, s['menu']['account']['my_account']['first'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.after').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][account][my_account][after]', s['menu']['account']['my_account']['after'] %>
+</p>
+<p>
+  <label><%= l('fas.general.last').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][account][my_account][last]', true, s['menu']['account']['my_account']['last'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.no') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.css').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][account][my_account][css]', s['menu']['account']['my_account']['css'] %>
+</p>
+<hr/>
+<em class="info">
+  <%= l('fas.settings.menu.account.logout.title') %>
+</em>
+<p>
+  <label><%= l('fas.general.replace').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][account][logout][replace]', true, s['menu']['account']['logout']['replace'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.first').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][account][logout][first]', true, s['menu']['account']['logout']['first'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.yes') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.after').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][account][logout][after]', s['menu']['account']['logout']['after'] %>
+</p>
+<p>
+  <label><%= l('fas.general.last').capitalize %>:</label>
+  <%= check_box_tag 'settings[menu][account][logout][last]', true, s['menu']['account']['logout']['last'] == "true" %>
+  <em class="info">
+    <%= l('fas.general.default.no') %>
+  </em>
+</p>
+<p>
+  <label><%= l('fas.general.css').capitalize %>:</label>
+  <%= text_field_tag 'settings[menu][account][logout][css]', s['menu']['account']['logout']['css'] %>
+</p>
+
+<%=
+ #Rails.logger.info I18n.config.load_path
+ #"Settings:<br/>".html_safe + @settings +
+ #"<br/>Default:<br/>".html_safe + d +
+ #"<br/>Merged:<br/>".html_safe + s# +
+ #"<br/>[menu][top][home][replace]:<br/>".html_safe+(s['menu']['top']['home']['replace'].to_s.downcase=="true").to_s
+%>
