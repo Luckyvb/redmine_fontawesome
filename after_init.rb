@@ -39,11 +39,6 @@ def fontawesome_init
     I18n.load_path += Dir[Rails.root.join("plugins","fontawesome","config","locales","*.yml")]
     I18n.locale = !User.current.language.blank? ? User.current.language : Setting.default_language
 
-<<<<<<< HEAD
-=======
-    Rails.logger.info s['account']['logout']
-
->>>>>>> 5e259cf583bd87e7b0c3cb5b3cb20a0ba91fde25
     if menu.exists?(:login) && s['account']['login']['replace'].to_s.downcase == "true"
       menu.delete :login
       menu.push :login, :signin_path, :caption => '', html: {:class=> s['account']['login']['css'], :title=>I18n.t(:label_login)}, first: s['account']['login'][:first], last: s['account']['login'][:last], after: s['account']['login'][:after], if: Proc.new { !User.current.logged? }
@@ -57,10 +52,6 @@ def fontawesome_init
       menu.push :my_account, {:controller => 'my', :action => 'account'}, :caption => '', html: {:class=> s['account']['my_account']['css'], :title=>I18n.t(:label_my_page)}, first: s['account']['my_account'][:first], last: s['account']['my_account'][:last], after: s['account']['my_account'][:after], if: Proc.new { User.current.logged? }
     end
     if menu.exists?(:logout) && s['account']['logout']['replace'].to_s.downcase == "true"
-<<<<<<< HEAD
-=======
-      Rails.logger.info s['account']['logout']
->>>>>>> 5e259cf583bd87e7b0c3cb5b3cb20a0ba91fde25
       menu.delete :logout
       menu.push :logout, :signout_path, :caption => '', html: {:class=> s['account']['logout']['css'], :title=>I18n.t(:label_my_page)}, first: s['account']['logout'][:first], last: s['account']['logout'][:last], after: s['account']['logout'][:after], if: Proc.new { User.current.logged? }
     end
