@@ -20,7 +20,7 @@ def fontawesome_init
     end
     if menu.exists?(:projects) && s['top']['projects']['replace'].to_s.downcase == "true"
       menu.delete :projects
-      menu.push :projects, {:controller => 'projects', :action => 'index'}, :caption => '', html: {:class=> s['top']['projects']['css'], :title=>I18n.t(:label_projects_plural)}, first: s['top']['projects'][:first], last: s['top']['projects'][:last], after: s['top']['projects'][:after]
+      menu.push :projects, {:controller => 'projects', :action => 'index'}, :caption => '', html: {:class=> s['top']['projects']['css'], :title=>I18n.t(:label_project_plural)}, first: s['top']['projects'][:first], last: s['top']['projects'][:last], after: s['top']['projects'][:after]
     end
     if menu.exists?(:administration) && s['top']['administration']['replace'].to_s.downcase == "true"
       menu.delete :administration

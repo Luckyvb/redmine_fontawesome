@@ -6,3 +6,10 @@
 #top-menu a:hover.fa, #top-menu a:hover.far, #top-menu a:hover.fas {
   text-decoration: none;
 }
+a.fa {
+  font-weight: 400;
+}
+#admin-menu a.fa::before {
+  font-weight: bold;
+  padding-right: 5px;
+}
